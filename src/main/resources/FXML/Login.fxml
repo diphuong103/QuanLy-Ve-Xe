@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="406.0" prefWidth="606.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.phuongbusbooking.Controllers.LoginController">
+    <children>
+        <AnchorPane fx:id="main_form" prefHeight="427.0" prefWidth="650.0">
+            <children>
+                <AnchorPane prefHeight="406.0" prefWidth="303.0" styleClass="left-form" stylesheets="@../Styles/loginDesign.css">
+                    <children>
+                        <ImageView fitHeight="406.0" fitWidth="303.0" layoutX="3.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../../../Pictures/Image/z4989008459135_3eac7558fff928db0734b0f0344606f0.jpg" />
+                            </image>
+                        </ImageView>
+                  <Label layoutX="27.0" layoutY="378.0" prefHeight="18.0" prefWidth="253.0" text="***Vé xe khu vực Đà Nẵng đi khắp cả nước !!!" />
+                    </children></AnchorPane>
+                <AnchorPane layoutX="303.0" prefHeight="406.0" prefWidth="303.0" stylesheets="@../Styles/loginDesign.css">
+                    <children>
+                        <Label layoutX="105.0" layoutY="122.0" text="Đăng nhập" textFill="#b22577">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="username" layoutX="63.0" layoutY="175.0" prefHeight="27.0" prefWidth="188.0" promptText="Nhập tài khoản" styleClass="textfield" stylesheets="@../Styles/loginDesign.css" AnchorPane.rightAnchor="52.19999999999999" />
+                        <PasswordField fx:id="password" layoutX="58.0" layoutY="215.0" prefHeight="27.0" prefWidth="188.0" promptText="Nhập mật khẩu" styleClass="textfield" stylesheets="@../Styles/loginDesign.css" AnchorPane.rightAnchor="52.19999999999999" />
+                        <Button layoutX="251.0" layoutY="2.0" mnemonicParsing="false" styleClass="close" stylesheets="@../Styles/loginDesign.css" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0" />
+                        <Button fx:id="close" layoutX="273.0" layoutY="2.0" mnemonicParsing="false" onAction="#close" styleClass="close" stylesheets="@../Styles/loginDesign.css" text="X" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0" />
+                        <ImageView fitHeight="63.0" fitWidth="70.0" layoutX="120.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../../../Pictures/Image/user.png" />
+                            </image>
+                        </ImageView>
+                        <Label layoutX="61.0" layoutY="383.0" text="Bạn chưa có tài khoản?" />
+                        <Hyperlink fx:id="register" layoutX="181.0" layoutY="379.0" onAction="#createaccount" text="Đăng ký">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Hyperlink>
+                  <Button fx:id="login" layoutX="108.0" layoutY="268.0" mnemonicParsing="false" onAction="#login" styleClass="login-btn" stylesheets="@../Styles/loginDesign.css" text="Đăng nhập" />
+                  <FontAwesomeIconView glyphName="USER" layoutX="48.0" layoutY="194.0" text="" wrappingWidth="29.60003662109375" />
+                  <FontAwesomeIconView glyphName="LOCK" layoutX="48.0" layoutY="239.0" />
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

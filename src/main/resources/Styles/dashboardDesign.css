@@ -1,0 +1,122 @@
+.top-form{
+    -fx-background-color: #fff;
+    -fx-border-color: #000;
+    -fx-border-width: .4px .4px .2px .4px;
+}
+
+.semi-top-form{
+    -fx-background-color: #efefef;
+    -fx-border-color: #000;
+    -fx-border-width: 0px .4px .8px .4px;
+}
+.nav-form{
+    -fx-background-color: linear-gradient(to bottom right, #0bd6ac, #d40f9b);
+}
+.close{
+    -fx-cursor: hand;
+}
+.close:hover{
+    -fx-background-color: #ff0303;
+}
+.white-bg{
+    -fx-background-color: #fff;
+    -fx-background-radius: 5px;
+}
+
+.shadow{
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.4), 5, 0, 0, 0);
+}
+.card1{
+    -fx-background-color: linear-gradient(to right, #c8dc0f, #1dbc05);
+    -fx-background-radius: 5px 15px 15px 5px;
+}
+.card2{
+    -fx-background-color: linear-gradient(to right, #e12ec4, #29b814);
+    -fx-background-radius: 5px 15px 15px 5px;
+}
+.card3{
+    -fx-background-color: linear-gradient(to right, #c21330, #c29e13);
+    -fx-background-radius: 5px 15px 15px 5px;
+}
+.card4{
+    -fx-background-color: linear-gradient(to right, #2019cf, #cf6e1b);
+    -fx-background-radius: 5px 15px 15px 5px;
+}
+.add{
+    -fx-background-color: #0fc912, #12c7af;
+}
+.update{
+    -fx-background-color: #4ef4de, #7ca2de;
+}
+.reset{
+    -fx-background-color: #e7ff11, #ffc012;
+}
+.delete{
+    -fx-background-color: #ff0000, #ff4747;
+}
+.date:focused{
+    -fx-border-color: linear-gradient(to right, #c8dc0f, #1dbc05);
+    -fx-border-width: 1.8px;
+}
+.out{
+    -fx-background-color: linear-gradient(to right, #c21330, #c29e13);
+}
+.exit{
+    -fx-background-color: transparent;
+
+}
+.exit:hover {
+    -fx-background-color: #ff0303;
+}
+
+.buton1{
+    -fx-background-color: transparent;
+
+}
+.buton1:hover {
+    -fx-background-color: #c29e13;
+}
+
+.buton3{
+    -fx-background-color: transparent;
+
+}
+.buton3:hover {
+    -fx-background-color: #31b7d6   ;
+}
+
+.buton4{
+    -fx-background-color: transparent;
+
+}
+.buton4:hover {
+    -fx-background-color: #1dbc05;
+}
+.buton2{
+    -fx-background-color: transparent;
+
+}
+.buton2:hover {
+    -fx-background-color: #d4d017;
+}
+.bt:hover{
+    -fx-background-color: #1cd8e5;
+}
+
+.minimize
+{
+    -fx-background-color: transparent;
+}
+.minimize:hover{
+    -fx-background-color: #898383;
+}
+.c-c {
+    -fx-background-color: #fff;
+    -fx-background-radius: 5px;
+    -fx-border-color: orange; /* Màu viền mà bạn muốn áp dụng, ở đây là màu cam */
+    -fx-border-width: 2px; /* Độ dày của viền */
+}
+
+.shadow1 {
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.4), 5, 0, 0, 0);
+}

@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane prefHeight="550.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.phuongbusbooking.Controllers.Admin.AdminDashboardController">
+   <children>
+      <AnchorPane fx:id="admin_dashboard" onMouseDragged="#onMouse_Dragged" onMousePressed="#onMouse_Pressed" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane layoutX="126.0" layoutY="71.0" prefHeight="505.6" prefWidth="802.4" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="29.0" prefWidth="802.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button fx:id="close" layoutX="855.0" layoutY="3.0" mnemonicParsing="false" onAction="#close" prefHeight="17.0" prefWidth="46.0" stylesheets="@../../Styles/dashboardDesign.css" text="X" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="1.0">
+                           <styleClass>
+                              <String fx:value="close" />
+                              <String fx:value="white-bg" />
+                           </styleClass>
+                        </Button>
+                        <Line endX="886.7999877929688" endY="-0.3999977111816406" layoutX="14.0" layoutY="28.0" startX="-14.000001907348633" startY="-0.399993896484375" />
+                        <FontAwesomeIconView glyphName="BUS" layoutX="5.0" layoutY="21.0" size="20" />
+                        <Label layoutX="30.0" layoutY="5.0" text="PhuongBusBooking">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="minimize" layoutX="803.0" layoutY="1.0" mnemonicParsing="false" onAction="#minimize" prefHeight="17.0" prefWidth="46.0" styleClass="minimize" stylesheets="@../../Styles/dashboardDesign.css" text="_" AnchorPane.topAnchor="1.0" />
+                     </children>
+                  </AnchorPane>
+               </top>
+               <left>
+                  <AnchorPane prefHeight="476.0" prefWidth="190.0" styleClass="nav-form" stylesheets="@../../Styles/dashboardDesign.css" BorderPane.alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="67.0" fitWidth="64.0" layoutX="71.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../../../../../Pictures/Image/user.png" />
+                           </image>
+                        </ImageView>
+                        <Button fx:id="dashboard_bnt" layoutX="24.8" layoutY="190.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="30.0" prefWidth="150.0" styleClass="buton2" stylesheets="@../../Styles/dashboardDesign.css" text="Trang chủ" AnchorPane.leftAnchor="25.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="bus_bnt" layoutX="59.0" layoutY="226.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="30.0" prefWidth="150.0" styleClass="buton1" stylesheets="@../../Styles/dashboardDesign.css" text="  Xe " AnchorPane.leftAnchor="25.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Button>
+                        <Line endX="100.0" layoutX="105.0" layoutY="148.0" startX="-100.0" />
+                        <Button fx:id="bookingTicket_bnt" layoutX="59.0" layoutY="259.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="30.0" prefWidth="150.0" styleClass="buton3" stylesheets="@../../Styles/dashboardDesign.css" text="Vé" AnchorPane.leftAnchor="25.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="customers_bnt" layoutX="59.0" layoutY="295.0" mnemonicParsing="false" onAction="#switchForm" prefHeight="30.0" prefWidth="150.0" styleClass="buton4" stylesheets="@../../Styles/dashboardDesign.css" text="Khách hàng" AnchorPane.leftAnchor="25.0">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="logout" layoutX="5.0" layoutY="480.0" mnemonicParsing="false" onAction="#logout" prefHeight="26.0" prefWidth="86.0" styleClass="exit" stylesheets="@../../Styles/dashboardDesign.css" text="Đăng xuất">
+                           <graphic>
+                              <FontAwesomeIconView glyphName="SIGN_OUT" />
+                           </graphic>
+                        </Button>
+                        <Label layoutX="80.0" layoutY="114.0" prefHeight="26.0" prefWidth="50.0" text="ADMIN" textFill="#1111ece8">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <FontAwesomeIconView glyphName="BUS" layoutX="44.0" layoutY="246.0" size="15" AnchorPane.leftAnchor="44.0" />
+                        <FontAwesomeIconView glyphName="TICKET" layoutX="43.0" layoutY="279.0" size="15" text="" />
+                        <FontAwesomeIconView glyphName="HOME" layoutX="43.0" layoutY="210.0" size="15" />
+                        <FontAwesomeIconView glyphName="USERS" layoutX="42.0" layoutY="315.0" size="15" />
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane fx:id="dashboard_form" layoutX="181.0" layoutY="97.0" prefHeight="476.0" prefWidth="596.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="6.0" prefHeight="155.0" prefWidth="678.0" stylesheets="@../../Styles/dashboardDesign.css" AnchorPane.topAnchor="5.0">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <AnchorPane layoutX="6.0" layoutY="6.0" prefHeight="144.0" prefWidth="216.0" stylesheets="@../../Styles/dashboardDesign.css" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                       <styleClass>
+                                          <String fx:value="card1" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <FontAwesomeIconView glyphName="BUS" layoutX="23.0" layoutY="55.0" size="25" />
+                                          <Label layoutX="12.0" layoutY="113.0" text="Xe có sẵn" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="4.8">
+                                             <font>
+                                                <Font size="19.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="dashboard_busNum" alignment="CENTER_RIGHT" layoutX="145.0" layoutY="14.0" prefHeight="20.0" prefWidth="61.0" text="0">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="231.0" layoutY="5.0" prefHeight="144.0" prefWidth="216.0" AnchorPane.rightAnchor="231.39999999999998" AnchorPane.topAnchor="5.0">
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="shadow" />
+                                          <String fx:value="card2" />
+                                       </styleClass>
+                                       <padding>
+                                          <Insets right="5.0" />
+                                       </padding>
+                                       <children>
+                                          <FontAwesomeIconView glyphName="MONEY" layoutX="17.0" layoutY="55.0" size="25" />
+                                          <Label layoutX="12.0" layoutY="113.0" text="Thu nhập hôm nay" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="5.0">
+                                             <font>
+                                                <Font size="19.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="145.0" layoutY="14.0" text="VND" AnchorPane.rightAnchor="5.0">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="dashboard_todayIncome" alignment="CENTER_RIGHT" layoutX="30.0" layoutY="14.0" prefHeight="20.0" prefWidth="143.0" text="0">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane layoutX="427.0" layoutY="16.0" prefHeight="144.0" prefWidth="216.0" stylesheets="@../../Styles/dashboardDesign.css" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                       <styleClass>
+                                          <String fx:value="white-bg" />
+                                          <String fx:value="card3" />
+                                          <String fx:value="shadow" />
+                                       </styleClass>
+                                       <children>
+                                          <FontAwesomeIconView glyphName="DOLLAR" layoutX="14.0" layoutY="55.0" size="25" />
+                                          <Label layoutX="145.0" layoutY="14.0" text="VND" AnchorPane.rightAnchor="5.0">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="dashboard_totalIncome" alignment="CENTER_RIGHT" layoutX="11.0" layoutY="14.0" prefHeight="20.0" prefWidth="165.0" text="0">
+                                             <font>
+                                                <Font size="14.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="12.0" layoutY="113.0" text="Tổng thu nhập" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="5.0">
+                                             <font>
+                                                <Font size="19.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                              <AreaChart fx:id="dashboard_chart" layoutX="7.0" layoutY="172.0" prefHeight="335.0" prefWidth="673.0">
+                                <xAxis>
+                                  <CategoryAxis side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis side="LEFT" />
+                                </yAxis>
+                              </AreaChart>
+                              <Label layoutX="272.0" layoutY="494.0" prefHeight="18.0" prefWidth="142.0" text="Đồ thị thu nhập">
+                                 <font>
+                                    <Font name="System Bold" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="bus_form" layoutX="167.0" layoutY="56.0" prefHeight="476.0" prefWidth="596.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="6.0" layoutY="5.0" prefHeight="514.0" prefWidth="234.0" stylesheets="@../../Styles/dashboardDesign.css" AnchorPane.bottomAnchor="3.0" AnchorPane.topAnchor="3.0">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <Label layoutX="34.0" layoutY="52.0" text="Mã xe:" />
+                                    <Label layoutX="38.0" layoutY="99.0" text="Vị trí:" />
+                                    <Label layoutX="14.0" layoutY="149.0" text="Trạng thái:" />
+                                    <Label layoutX="42.0" layoutY="210.0" text="Giá:" />
+                                    <Label layoutX="20.0" layoutY="257.0" text="Ngày đi:" />
+                                    <TextField fx:id="bus_busId" layoutX="70.0" layoutY="48.0" AnchorPane.rightAnchor="13.0" />
+                                    <TextField fx:id="bus_location" layoutX="70.0" layoutY="95.0" AnchorPane.rightAnchor="13.0" />
+                                    <TextField fx:id="bus_price" layoutX="52.0" layoutY="206.0" prefHeight="26.0" prefWidth="150.0" AnchorPane.rightAnchor="13.0" />
+                                    <DatePicker fx:id="bus_date" layoutX="55.0" layoutY="253.0" prefHeight="26.0" prefWidth="150.0" AnchorPane.rightAnchor="13.0" />
+                                    <ComboBox fx:id="bus_status" layoutX="54.0" layoutY="145.0" prefHeight="26.0" prefWidth="149.0" promptText="Chọn" AnchorPane.rightAnchor="13.0" />
+                                    <Button fx:id="bus_add" layoutX="26.0" layoutY="347.0" mnemonicParsing="false" onAction="#BusAdd" prefHeight="26.0" prefWidth="64.0" stylesheets="@../../Styles/dashboardDesign.css" text="Thêm" AnchorPane.bottomAnchor="140.99999999999986" AnchorPane.leftAnchor="26.0">
+                                       <styleClass>
+                                          <String fx:value="add" />
+                                          <String fx:value="bt" />
+                                       </styleClass></Button>
+                                    <Button fx:id="bus_update" layoutX="139.0" layoutY="350.0" mnemonicParsing="false" onAction="#BusUpdate" prefHeight="26.0" prefWidth="64.0" stylesheets="@../../Styles/dashboardDesign.css" text="Cập nhật" AnchorPane.bottomAnchor="140.99999999999986" AnchorPane.rightAnchor="26.0">
+                                       <styleClass>
+                                          <String fx:value="update" />
+                                          <String fx:value="bt" />
+                                       </styleClass></Button>
+                                    <Button fx:id="bus_reset" layoutX="26.0" layoutY="405.0" mnemonicParsing="false" onAction="#BusReset" prefHeight="26.0" prefWidth="64.0" stylesheets="@../../Styles/dashboardDesign.css" text="Làm mới" AnchorPane.bottomAnchor="80.0">
+                                       <styleClass>
+                                          <String fx:value="reset" />
+                                          <String fx:value="bt" />
+                                       </styleClass></Button>
+                                    <Button fx:id="bus_delete" layoutX="139.0" layoutY="405.0" mnemonicParsing="false" onAction="#BusDelete" prefHeight="26.0" prefWidth="64.0" stylesheets="@../../Styles/dashboardDesign.css" text="Xóa" AnchorPane.bottomAnchor="80.0" AnchorPane.rightAnchor="26.0">
+                                       <styleClass>
+                                          <String fx:value="delete" />
+                                          <String fx:value="bt" />
+                                       </styleClass></Button>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="246.4" layoutY="3.0" prefHeight="514.0" prefWidth="440.0" stylesheets="@../../Styles/dashboardDesign.css" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="246.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="3.0">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <TableView fx:id="bus_tableView" layoutX="4.0" layoutY="61.0" onMouseClicked="#avaiableBSelectBusData" prefHeight="446.0" prefWidth="434.0">
+                                      <columns>
+                                        <TableColumn fx:id="bus_t_busId" prefWidth="91.20001077651978" text="Mã xe" />
+                                        <TableColumn fx:id="bus_t_location" prefWidth="87.99994659423828" text="Vị trí" />
+                                          <TableColumn fx:id="bus_t_status" prefWidth="76.800048828125" text="Trạng thái" />
+                                          <TableColumn fx:id="bus_t_price" prefWidth="86.39999389648438" text="Giá" />
+                                          <TableColumn fx:id="bus_t_date" prefWidth="96.800048828125" text="Ngày đi" />
+                                      </columns>
+                                    </TableView>
+                                    <TextField fx:id="bus_search" layoutX="30.0" layoutY="22.0" onAction="#bus_t_search" prefHeight="26.0" prefWidth="182.0" promptText="Tìm kiếm" />
+                                    <FontAwesomeIconView glyphName="SEARCH" layoutX="14.0" layoutY="39.0" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="bookingTicket_form" layoutX="187.0" layoutY="95.0" prefHeight="520.8" prefWidth="696.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <AnchorPane layoutX="8.0" layoutY="6.0" prefHeight="182.0" prefWidth="678.0" stylesheets="@../../Styles/dashboardDesign.css" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                 <styleClass>
+                                    <String fx:value="white-bg" />
+                                    <String fx:value="shadow" />
+                                 </styleClass>
+                                 <children>
+                                    <AnchorPane layoutX="277.0" layoutY="-2.0" prefHeight="182.0" prefWidth="415.0" styleClass="nav-form" stylesheets="@../../Styles/dashboardDesign.css" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <children>
+                                          <Label layoutX="6.0" layoutY="1.0" text="Thông tin khách hàng">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Label layoutX="14.0" layoutY="34.0" text="Họ và tên:" AnchorPane.leftAnchor="14.0" />
+                                          <Label layoutX="5.0" layoutY="74.0" text="Số điện thoại:" AnchorPane.leftAnchor="5.0" />
+                                          <Label layoutX="34.0" layoutY="109.0" text="Ngày đi:" />
+                                          <Button fx:id="bookingTicket_reset" layoutX="207.0" layoutY="143.0" mnemonicParsing="false" onAction="#bookingTicketreset" text="Làm mới" />
+                                          <Button fx:id="bookingTicket_save" layoutX="307.0" layoutY="143.0" mnemonicParsing="false" onAction="#bookingTicketSelect" prefHeight="26.0" prefWidth="59.0" text="Lưu" />
+                                          <TextField fx:id="bookingTicket_fullName" layoutX="87.0" layoutY="30.0" prefHeight="26.0" prefWidth="165.0" AnchorPane.leftAnchor="87.0" />
+                                          <TextField fx:id="bookingTicket_phoneNumber" layoutX="87.0" layoutY="69.0" prefHeight="26.0" prefWidth="165.0" AnchorPane.leftAnchor="87.0" />
+                                          <DatePicker fx:id="bookingTicket_date" layoutX="88.0" layoutY="105.0" prefHeight="26.0" prefWidth="143.0" />
+                                       </children>
+                                    </AnchorPane>
+                                    <Label layoutX="21.0" layoutY="24.0" text="Mã xe:" />
+                                    <Label layoutX="25.0" layoutY="73.0" text="Vị trí:" />
+                                    <Label layoutX="25.0" layoutY="127.0" text="Vé #:" />
+                                    <ComboBox fx:id="bookingTicket_busId" layoutX="74.0" layoutY="20.0" onAction="#busIDList" prefWidth="150.0" promptText="Chọn" />
+                                    <ComboBox fx:id="bookingTicket_location" layoutX="74.0" layoutY="69.0" onAction="#busLocationList" prefWidth="150.0" promptText="Chọn" />
+                                    <ComboBox fx:id="bookingTicket_ticketNumber" layoutX="74.0" layoutY="123.0" onAction="#ticketNum" prefWidth="150.0" promptText="Chọn" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="5.0" layoutY="197.0" prefHeight="323.0" prefWidth="686.0" stylesheets="@../../Styles/dashboardDesign.css">
+                                 <styleClass>
+                                    <String fx:value="shadow" />
+                                    <String fx:value="white-bg" />
+                                 </styleClass>
+                                 <children>
+                                    <Label layoutX="7.0" layoutY="7.0" text="Hoàn thành thông tin khách hàng">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="34.0" layoutY="60.0" text="Họ và tên:" AnchorPane.leftAnchor="34.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="14.0" layoutY="108.0" text="Số điện thoại:" AnchorPane.leftAnchor="14.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="47.0" layoutY="152.0" text="Ngày đi:" AnchorPane.leftAnchor="47.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="388.0" layoutY="60.0" prefHeight="20.0" prefWidth="45.0" text="Mã xe:" AnchorPane.leftAnchor="388.0" AnchorPane.rightAnchor="253.60000000000002">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="392.0" layoutY="108.0" prefHeight="20.0" prefWidth="35.0" text="Vị trí:" AnchorPane.leftAnchor="392.0" AnchorPane.rightAnchor="259.2">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="391.0" layoutY="151.0" prefHeight="20.0" prefWidth="39.0" text="Vé #:" AnchorPane.leftAnchor="391.0" AnchorPane.rightAnchor="257.0">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="bookingTicket_f_phoneNumber" layoutX="103.0" layoutY="105.0" AnchorPane.leftAnchor="103.0" />
+                                    <TextField fx:id="bookingTicket_f_fullName" layoutX="103.0" layoutY="58.0" AnchorPane.leftAnchor="103.0" />
+                                    <TextField fx:id="bookingTicket_f_date" layoutX="103.0" layoutY="149.0" AnchorPane.leftAnchor="103.0" />
+                                    <TextField fx:id="bookingTicket_f_busId" layoutX="442.0" layoutY="57.0" prefHeight="26.0" prefWidth="150.0" AnchorPane.leftAnchor="442.0" AnchorPane.rightAnchor="94.0" />
+                                    <TextField fx:id="bookingTicket_f_location" layoutX="442.0" layoutY="105.0" prefHeight="26.0" prefWidth="150.0" AnchorPane.leftAnchor="442.0" AnchorPane.rightAnchor="94.0" />
+                                    <TextField fx:id="bookingTicket_f_ticketNumber" layoutX="442.0" layoutY="149.0" prefHeight="26.0" prefWidth="150.0" AnchorPane.leftAnchor="442.0" AnchorPane.rightAnchor="94.0" />
+                                    <Label layoutX="159.0" layoutY="224.0" text="Tổng số tiền:">
+                                       <font>
+                                          <Font size="19.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="382.0" layoutY="227.0" text="VND">
+                                       <font>
+                                          <Font name="System Bold Italic" size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="bookingTicket_f_moneyTotal" alignment="CENTER_RIGHT" layoutX="270.0" layoutY="228.0" prefHeight="20.0" prefWidth="106.0" text="0">
+                                       <font>
+                                          <Font name="System Italic" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="bookingTicket_f_pay" layoutX="542.0" layoutY="276.0" mnemonicParsing="false" onAction="#bookingTicketPay" prefHeight="26.0" prefWidth="62.0" text="Hoàn tất" />
+                                    <Label layoutX="416.0" layoutY="23.0" text="Mã khách hàng:">
+                                       <font>
+                                          <Font size="15.0" />
+                                       </font>
+                                    </Label>
+                                    <Label fx:id="bookingticket_idCustomer" layoutX="534.0" layoutY="21.0" prefHeight="18.0" prefWidth="66.0">
+                                       <font>
+                                          <Font name="System Italic" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="receipt" layoutX="462.0" layoutY="276.0" mnemonicParsing="false" onAction="#Bookingbus_receipt" text="Biên lai" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="customers_form" layoutX="128.0" layoutY="81.0" prefHeight="520.8" prefWidth="696.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <TableView fx:id="customers_table" layoutX="5.0" layoutY="52.0" prefHeight="460.0" prefWidth="688.0" stylesheets="@../../Styles/dashboardDesign.css">
+                                <columns>
+                                    <TableColumn fx:id="customers_stt" prefWidth="31.199949741363525" text="Stt" />
+                                  <TableColumn fx:id="customers_Id" prefWidth="49.60003662109375" text="ID" />
+                                    <TableColumn fx:id="customers_ticketNum" prefWidth="43.19995880126953" text="Vé" />
+                                    <TableColumn fx:id="customers_fullName" prefWidth="131.99993896484375" text="Họ và tên" />
+                                    <TableColumn fx:id="customers_phoneNumber" prefWidth="115.19998168945312" text="Số điện thoại" />
+                                    <TableColumn fx:id="customers_busId" prefWidth="60.0" text="Mã xe" />
+                                    <TableColumn fx:id="customers_location" minWidth="0.0" prefWidth="144.80001831054688" text="Vị trí" />
+                                    <TableColumn fx:id="customers_date" minWidth="0.0" prefWidth="114.39990234375" text="Ngày đi" />
+                                </columns>
+                                 <styleClass>
+                                    <String fx:value="shadow" />
+                                    <String fx:value="white-bg" />
+                                 </styleClass>
+                              </TableView>
+                              <TextField fx:id="customers_search" layoutX="36.0" layoutY="12.0" onAction="#cus_t_search" prefHeight="26.0" prefWidth="191.0" promptText="Tìm kiếm" styleClass="shadow" stylesheets="@../../Styles/dashboardDesign.css" />
+                              <FontAwesomeIconView glyphName="SEARCH" layoutX="14.0" layoutY="31.0" size="16" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+            </BorderPane>
+         </children></AnchorPane>
+   </children>
+</StackPane>

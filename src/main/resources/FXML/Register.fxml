@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stackPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="406.0" prefWidth="606.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.phuongbusbooking.Controllers.RegisterController">
+    <children>
+        <AnchorPane fx:id="main_form" onMouseDragged="#onMouse_Dragged" onMousePressed="#onMouse_Pressed" prefHeight="427.0" prefWidth="650.0">
+            <children>
+                <AnchorPane prefHeight="406.0" prefWidth="303.0" styleClass="left-form" stylesheets="@../Styles/loginDesign.css">
+                    <children>
+                        <ImageView fitHeight="406.0" fitWidth="303.0" layoutX="3.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../../../Pictures/Image/z4989008459135_3eac7558fff928db0734b0f0344606f0.jpg" />
+                            </image>
+                        </ImageView>
+                    </children></AnchorPane>
+                <AnchorPane layoutX="303.0" prefHeight="406.0" prefWidth="303.0" stylesheets="@../Styles/loginDesign.css">
+                    <children>
+                        <Label layoutX="77.0" layoutY="97.0" prefHeight="27.0" prefWidth="165.0" text="Đăng ký tài khoản" textFill="#b22577">
+                            <font>
+                                <Font name="System Bold" size="18.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="accoutname" layoutX="63.0" layoutY="175.0" prefHeight="27.0" prefWidth="188.0" promptText="Tên đăng nhập" styleClass="textfield" stylesheets="@../Styles/loginDesign.css" AnchorPane.rightAnchor="52.19999999999999" />
+                        <PasswordField fx:id="password" layoutX="58.0" layoutY="215.0" prefHeight="27.0" prefWidth="188.0" promptText="Mật khẩu" styleClass="textfield" stylesheets="@../Styles/loginDesign.css" AnchorPane.rightAnchor="52.19999999999999" />
+                        <Button layoutX="251.0" layoutY="2.0" mnemonicParsing="false" styleClass="close" stylesheets="@../Styles/loginDesign.css" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0" />
+                        <Button fx:id="close" layoutX="273.0" layoutY="2.0" mnemonicParsing="false" onAction="#close" styleClass="close" stylesheets="@../Styles/loginDesign.css" text="X" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="2.0" />
+                        <ImageView fitHeight="63.0" fitWidth="70.0" layoutX="120.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../../../../Pictures/Image/user.png" />
+                            </image>
+                        </ImageView>
+                        <Label layoutX="61.0" layoutY="383.0" text="Bạn đã có tài khoản?" />
+                        <Hyperlink fx:id="login" layoutX="170.0" layoutY="378.0" onAction="#loginaccount" text="Đăng nhập">
+                            <font>
+                                <Font size="14.0" />
+                            </font>
+                        </Hyperlink>
+                  <PasswordField fx:id="password1" layoutX="66.0" layoutY="258.0" prefHeight="27.0" prefWidth="188.0" promptText="Nhập lại mật khẩu" styleClass="textfield" stylesheets="@../Styles/loginDesign.css" AnchorPane.rightAnchor="52.19999999999999" />
+                  <TextField fx:id="phonenumber" layoutX="63.0" layoutY="139.0" prefHeight="27.0" prefWidth="188.0" promptText="Số điện thoại" styleClass="textfield" stylesheets="@../Styles/loginDesign.css" AnchorPane.rightAnchor="52.19999999999999" />
+                  <Button fx:id="createAccount" layoutX="105.0" layoutY="304.0" mnemonicParsing="false" onAction="#createAccount" styleClass="login-btn" stylesheets="@../Styles/registerDesign.css" text="Tạo tài khoản" />
+                  <Label fx:id="erphone" layoutX="112.0" layoutY="130.0" prefHeight="18.0" prefWidth="188.0" textFill="RED">
+                     <font>
+                        <Font name="System Bold Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="erpass" layoutX="122.0" layoutY="242.0" prefHeight="18.0" prefWidth="180.0" textFill="RED" />
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>
